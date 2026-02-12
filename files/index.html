@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special Valentine's Day message for my love">
+    <title>Valentine's 2026 — A Love Story</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@400;500;700&family=Italiana&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="countdown-container">
+                <div class="countdown-number" id="countdownNumber">3</div>
+                <div class="heart-beat-loader">
+                    <svg viewBox="0 0 100 100" class="heart-svg">
+                        <path
+                            d="M50,90 C50,90 10,60 10,35 C10,20 20,10 30,10 C40,10 50,20 50,20 C50,20 60,10 70,10 C80,10 90,20 90,35 C90,60 50,90 50,90 Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="loading-text">Get Ready...</div>
+            </div>
+
+            <div class="card-container" id="cardContainer">
+                <div class="falling-card">
+                    <div class="card-face card-front">
+                        <div class="card-decoration"></div>
+                        <h2 class="card-title">You Are Invited</h2>
+                        <p class="card-message">
+                            To a journey through our love story.<br>
+                            Every moment, every memory,<br>
+                            crafted just for you.
+                        </p>
+                        <div class="card-heart">❤️</div>
+                    </div>
+                </div>
+                <div class="ground-shadow"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas Particle System -->
+    <canvas id="heartParticles" class="heart-particles-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Floating 3D Shapes -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">V'26</div>
+        <div class="nav-menu">
+            <a href="#hero" class="nav-link active">Story</a>
+            <a href="#moments" class="nav-link">Moments</a>
+            <a href="#vault" class="nav-link">Vault</a>
+            <a href="#letter" class="nav-link">Letter</a>
+            <a href="#games" class="nav-link">Play</a>
+        </div>
+        <div class="nav-controls">
+            <button id="privateModeToggle" class="nav-btn" aria-label="Private Mode">
+                <span class="icon-eye">👁️</span>
+            </button>
+            <div class="nav-sound" id="soundToggle">
+                <span class="sound-text">Sound</span>
+                <div class="sound-bars">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-number">01</div>
+
+        <div class="hero-content">
+            <div class="hero-label">Valentine's Day 2026</div>
+
+            <h1 class="hero-title">
+                <span class="title-word" data-word="For">For</span>
+                <span class="title-word" data-word="My">My</span>
+                <span class="title-word highlight" data-word="One">One</span>
+                <span class="title-word" data-word="&">&</span>
+                <span class="title-word highlight" data-word="Only">Only</span>
+            </h1>
+
+            <div class="hero-subtitle">
+                <p>A digital love letter crafted with devotion,</p>
+                <p>celebrating the moments that make us <em>us</em></p>
+            </div>
+
+            <div class="hero-scroll">
+                <div class="scroll-line"></div>
+                <span class="scroll-text">Scroll to explore our LOVE.</span>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <div class="image-frame">
+                <img data-src="../asset/together8.jpg"
+                    alt="Romantic moment" loading="eager">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+
+        <div class="hero-bg-text">LOVE</div>
+    </section>
+
+    <!-- Timeline / Story Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Our Journey</h2>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-item" data-animate>
+                <div class="timeline-image">
+                    <div class="image-reveal">
+                        <img data-src="../asset/collage1.png"
+                            alt="First meeting">
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Chapter One</span>
+                    <h3 class="timeline-title">When Stars Aligned</h3>
+                    <p class="timeline-text">
+                        That first moment when our eyes met on the ground when you came along with your red bike, time seemed to stand still.
+                        I didn't know then that you'd become my everything, but looking back now,
+                        it feels like destiny had been writing our story all along.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item reverse" data-animate>
+                <div class="timeline-image">
+                    <div class="image-reveal">
+                        <img data-src="../asset/collage2.png"
+                            alt="Growing closer">
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Chapter Two</span>
+                    <h3 class="timeline-title">Falling Deeper</h3>
+                    <p class="timeline-text">
+                        Late night conversations that turned into early mornings. Your laugh became my
+                        favorite sound, your smile my greatest reward. Every moment with you felt like
+                        discovering a beautiful secret the world had been hiding.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate>
+                <div class="timeline-image">
+                    <div class="image-reveal">
+                        <img data-src="../asset/collage3.png"
+                            alt="Adventures together">
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Chapter Three</span>
+                    <h3 class="timeline-title">Building Dreams</h3>
+                    <p class="timeline-text">
+                        Together we've laughed, cried, grown, and dreamed. You've been my partner in
+                        every adventure, my comfort in every storm. With you, I've found a love that
+                        feels like home.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Moments Section -->
+    <section id="moments" class="moments-section">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Captured Moments</h2>
+        </div>
+
+        <div class="moments-grid">
+            <div class="moment-card large" data-animate>
+                <div class="moment-image">
+                    <img data-src="../asset/together15.jpg"
+                        alt="Sunset together">
+                    <div class="moment-overlay">
+                        <span class="moment-caption">Young Us</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment-card" data-animate>
+                <div class="moment-image">
+                    <img data-src="../asset/together1.jpg"
+                        alt="Close moment">
+                    <div class="moment-overlay">
+                        <span class="moment-caption">Just Us</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment-card tall" data-animate>
+                <div class="moment-image">
+                    <img data-src="../asset/together2.jpg"
+                        alt="Adventure">
+                    <div class="moment-overlay">
+                        <span class="moment-caption">Like a Queen</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment-card" data-animate>
+                <div class="moment-image">
+                    <img data-src="../asset/together14.jpg"
+                        alt="Laughter">
+                    <div class="moment-overlay">
+                        <span class="moment-caption">Always at your Side</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment-card wide" data-animate>
+                <div class="moment-image">
+                    <img data-src="../asset/together13.jpg"
+                        alt="Night sky">
+                    <div class="moment-overlay">
+                        <span class="moment-caption">Happy Us</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment-card" data-animate>
+                <div class="moment-image">
+                    <img data-src="../asset/together19.jpg"
+                        alt="Peaceful moment">
+                    <div class="moment-overlay">
+                        <span class="moment-caption">Serenity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Memory Vault Section -->
+    <section id="vault" class="vault-section">
+        <div class="vault-container">
+            <div class="vault-door" id="vaultDoor">
+                <div class="vault-lock">
+                    <div class="lock-icon">🔒</div>
+                    <p class="lock-text">Some memories are only for us</p>
+                    <button class="unlock-btn" id="vaultUnlockBtn">Unlock Vault</button>
+                </div>
+                <div class="door-panel left"></div>
+                <div class="door-panel right"></div>
+            </div>
+
+            <div class="vault-content" id="vaultContent">
+                <div class="vault-grid">
+                    <div class="vault-item">
+                        <img data-src="../asset/together4.jpg"
+                            alt="Private memory">
+                    </div>
+                    <div class="vault-item">
+                        <img data-src="../asset/together5.jpg"
+                            alt="Private memory">
+                    </div>
+                    <div class="vault-item">
+                        <img data-src="../asset/together6.jpg"
+                            alt="Private memory">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Polaroid Wall Section -->
+    <section id="polaroid" class="polaroid-section">
+        <h2 class="section-title text-center">Unfiltered Us</h2>
+        <div class="polaroid-container" id="polaroidContainer">
+            <!-- Polaroids will be injected here via JS for randomness -->
+            <div class="polaroid-item" data-caption="Best Fit Moment of Yours">
+                <img data-src="../asset/together9.jpg" alt="Memory"
+                    data-sound="assets/laughter.mp3">
+            </div>
+            <div class="polaroid-item" data-caption="Big Heart Valentine's Day">
+                <img data-src="../asset/together11.jpg" alt="Memory">
+            </div>
+            <div class="polaroid-item" data-caption="The Model Kind a Pose">
+                <img data-src="../asset/together10.jpg" alt="Memory">
+            </div>
+            <div class="polaroid-item" data-caption="As Beautiful as Snow">
+                <img data-src="../asset/together12.jpg" alt="Memory">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Memory Match Game -->
+    <section id="games" class="games-section">
+        <div class="section-header">
+            <span class="section-number">03.5</span>
+            <h2 class="section-title">Play With Heart</h2>
+        </div>
+
+        <div class="game-container">
+            <h3 class="game-title">Memory Match</h3>
+            <p class="game-subtitle">Find the matching moments</p>
+
+            <div class="memory-grid" id="memoryGrid">
+                <!-- Cards injected via JS -->
+            </div>
+
+            <div class="game-win-message" id="memoryWinMsg">
+                <h3>Perfect Match! ❤️</h3>
+                <p>You remember us as deeply as I do.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Relationship Quiz -->
+    <section id="quiz" class="quiz-section">
+        <div class="quiz-container">
+            <div class="quiz-card" id="quizCard">
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="quizProgress"></div>
+                </div>
+                <div class="quiz-content" id="quizContent">
+                    <!-- Questions injected via JS -->
+                    <button class="start-quiz-btn" id="startQuizBtn">How well do you know us?</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section id="letter" class="letter-section">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">A Letter to You</h2>
+        </div>
+
+        <div class="letter-content">
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <span class="letter-to">To my dearest,</span>
+                    <div class="letter-decoration"></div>
+                </div>
+
+                <div class="letter-body">
+                    <p class="letter-para typewriter"
+                        data-text="How do I put into words what you mean to me? You are the sunrise after my darkest nights, 
+                        the melody in my silence, the warmth in my winters. Every day with you feels like unwrapping a gift I never knew I needed.">
+                        <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                    </p>
+
+                    <p class="letter-para typewriter"
+                        data-text="Your strength inspires me. Your kindness humbles me. Your love completes me. 
+                        In your eyes, I've found my home. In your arms, I've found my peace. In your heart, I've found my forever.">
+                        <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                    </p>
+
+                    <p class="letter-para typewriter"
+                        data-text="I promise to cherish every laugh we share, every dream we build, every challenge we face together. 
+                        I promise to love you on the easy days and hold you closer on the hard ones. 
+                        I promise to be your partner, your confidant, your biggest fan.">
+                        <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                    </p>
+
+                    <p class="letter-para typewriter"
+                        data-text="Thank you for choosing me. Thank you for seeing me. Thank you for loving me exactly as I am. 
+                        You are my greatest adventure, my deepest love, my always and forever.">
+                        <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                    </p>
+                </div>
+
+                <div class="letter-signature">
+                    <p class="signature-text">With all my love,</p>
+                    <p class="signature-name">Your Forever Valentine</p>
+                    <span class="signature-date">February 14, 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons Section -->
+    <section id="reasons" class="reasons-section">
+        <div class="reasons-header">
+            <h2 class="reasons-title">Why I Love You</h2>
+            <p class="reasons-subtitle">A thousand reasons and counting...</p>
+        </div>
+
+        <div class="reasons-grid">
+            <div class="reason-item" data-animate style="--delay: 0.1s">
+                <div class="reason-number">01</div>
+                <h3 class="reason-title">Your Smile</h3>
+                <p class="reason-text">It lights up my world and makes everything better</p>
+            </div>
+
+            <div class="reason-item" data-animate style="--delay: 0.2s">
+                <div class="reason-number">02</div>
+                <h3 class="reason-title">Your Kindness</h3>
+                <p class="reason-text">The way you care for others inspires me daily</p>
+            </div>
+
+            <div class="reason-item" data-animate style="--delay: 0.3s">
+                <div class="reason-number">03</div>
+                <h3 class="reason-title">Your Strength</h3>
+                <p class="reason-text">You face every challenge with grace and courage</p>
+            </div>
+
+            <div class="reason-item" data-animate style="--delay: 0.4s">
+                <div class="reason-number">04</div>
+                <h3 class="reason-title">Your Laughter</h3>
+                <p class="reason-text">My favorite sound in the entire universe</p>
+            </div>
+
+            <div class="reason-item" data-animate style="--delay: 0.5s">
+                <div class="reason-number">05</div>
+                <h3 class="reason-title">Your Dreams</h3>
+                <p class="reason-text">Supporting your ambitions is my greatest joy</p>
+            </div>
+
+            <div class="reason-item" data-animate style="--delay: 0.6s">
+                <div class="reason-number">06</div>
+                <h3 class="reason-title">Your Love</h3>
+                <p class="reason-text">It makes me believe in magic every single day</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Secret Envelope -->
+    <section id="envelope" class="envelope-section">
+        <div class="envelope-container">
+            <div class="envelope-wrapper" id="envelopeWrapper">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-pocket"></div>
+                    <div class="wax-seal" id="waxSeal">
+                        <span class="seal-text">❤️</span>
+                    </div>
+                    <div class="letter-preview"></div>
+                </div>
+            </div>
+
+            <div class="date-lock" id="dateLock">
+                <p class="lock-prompt">This message unlocks on a special date</p>
+                <div class="date-input-group">
+                    <input type="date" id="secretDateInput" class="date-input">
+                    <button id="checkDateBtn" class="check-btn">Open</button>
+                </div>
+                <p class="lock-hint" id="lockHint"></p>
+            </div>
+
+            <div class="secret-message" id="secretMessage">
+                <div class="secret-content">
+                    <h2>My Dearest,</h2>
+                    <p>If you are reading this, you remembered our special day.</p>
+                    <p>I wanted to tell you...</p>
+                    <p class="highlight-text">YOU ARE PERFECT MATCH FOR ME. NEVER EVER LEAVE ME.</p>
+                    <p>Forever yours.</p>
+                    <button class="close-secret-btn" id="closeSecretBtn">Keep it safe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Surprise Section -->
+    <section id="surprise" class="surprise-section">
+        <div class="surprise-container">
+            <div class="surprise-unopened" id="surpriseBox">
+                <div class="surprise-glow"></div>
+                <h3 class="surprise-title">A Special Surprise</h3>
+                <p class="surprise-hint">Click to reveal your gift</p>
+                <div class="surprise-icon">🎁</div>
+            </div>
+
+            <div class="surprise-revealed" id="surpriseReveal">
+                <h2 class="reveal-title">You Are My Everything</h2>
+                <p class="reveal-message">
+                    Every moment, every memory, every breath — they all lead me back to you.
+                    You're not just my Valentine today, but my choice every single day.
+                    Here's to our forever, to our always, to our endless love story.
+                </p>
+                <div class="reveal-hearts">
+                    <span class="heart-icon">💕</span>
+                    <span class="heart-icon">💖</span>
+                    <span class="heart-icon">💗</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Future Letters -->
+    <section id="future" class="future-section">
+        <h2 class="section-title text-center">Open When...</h2>
+        <div class="capsule-grid">
+            <div class="capsule-card" data-modal="modal-sad">
+                <div class="capsule-icon">🌧️</div>
+                <p class="capsule-label">You feel low</p>
+            </div>
+            <div class="capsule-card" data-modal="modal-miss">
+                <div class="capsule-icon">💭</div>
+                <p class="capsule-label">You miss me</p>
+            </div>
+            <div class="capsule-card" data-modal="modal-anniversary">
+                <div class="capsule-icon">🥂</div>
+                <p class="capsule-label">Our next Anniversary</p>
+                <div class="capsule-lock">🔒</div>
+            </div>
+        </div>
+
+        <!-- Modals for letters -->
+        <div class="capsule-modal" id="modal-sad">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <h3>For the heavy days...</h3>
+                <p>Remember that storms don't last forever. I am here with you, holding your hand through the rain. You
+                    are stronger than you know, and loved more than you can imagine.</p>
+            </div>
+        </div>
+        <div class="capsule-modal" id="modal-miss">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <h3>When we are apart...</h3>
+                <p>Close your eyes. Take a deep breath. Can you feel that? That's me, sending you all my love across the
+                    distance. I'll be back in your arms before you know it.</p>
+            </div>
+        </div>
+        <div class="capsule-modal" id="modal-anniversary">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="timer-display">
+                    <p>Opens in:</p>
+                    <span id="anniversaryCountdown">8th April</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Forever Section -->
+    <section id="forever" class="forever-section">
+        <div class="forever-content">
+            <div class="forever-number">∞</div>
+            <h2 class="forever-title">Forever Yours</h2>
+            <p class="forever-text">
+                Today, tomorrow, and all the days after — <br>
+                my heart belongs to you
+            </p>
+            <div class="forever-date">
+                <span class="date-day">14</span>
+                <span class="date-month">February</span>
+                <span class="date-year">2026</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">
+            <span></span>
+            <span></span>
+        </button>
+        <div class="lightbox-content">
+            <img src="../asset/together3.jpg" alt="Gallery image" class="lightbox-image" id="lightboxImage">
+        </div>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">←</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">→</button>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
